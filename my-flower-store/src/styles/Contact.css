@@ -1,0 +1,67 @@
+.contact-form {
+    max-width: 500px;
+    margin: 0 auto; /* Centers the form horizontally */
+    padding: 20px; /* Adds padding inside the form */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column; /* Aligns children vertically */
+    align-items: center; /* Centers children horizontally */
+    box-sizing: border-box; /* Ensures padding is included in width calculations */
+}
+
+.contact-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.form-group {
+    width: 100%; /* Ensures fields take up the full width of the form */
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column; /* Aligns label and input vertically */
+    align-items: flex-start; /* Aligns label and input to the left */
+    box-sizing: border-box; /* Prevents overflow due to padding */
+}
+
+.form-group label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%; /* Makes inputs and textarea stretch to full width */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box; /* Ensures padding doesn't cause overflow */
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.submit-button {
+    width: 100%; /* Makes the button stretch to full width */
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #0056b3;
+}

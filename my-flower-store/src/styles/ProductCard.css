@@ -1,0 +1,11 @@
+.product-card {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.product-card:hover {
+    background-color: #e0ffe0;
+    transform:scale(1.005);
+}

@@ -5,7 +5,7 @@ import '../styles/Header.css';
 const Header: React.FC = () => {
   return (
     <header className="header">
-      <h1>Flower Resin Store</h1>
+      {/* <img src="/src/images/pink-blue-floral-bouquet-with-watercolor.jpg" alt="pink-blue-floral-bouquet-with-watercolor" width={100} /> */}
       <nav>
         <ul>
           <li><Link to="/">Home</Link></li>

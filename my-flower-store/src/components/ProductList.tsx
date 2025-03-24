@@ -11,6 +11,27 @@ const products: Product[] = [
     price: 29.99,
     image: '/src/images/roses_in_resin.jpg',
   },
+  {
+    id: 2,
+    name: 'Rose in Resin',
+    description: 'A beautiful rose preserved in resin.',
+    price: 29.99,
+    image: '/src/images/roses_in_resin.jpg',
+  },
+  {
+    id: 3,
+    name: 'Rose in Resin',
+    description: 'A beautiful rose preserved in resin.',
+    price: 29.99,
+    image: '/src/images/roses_in_resin.jpg',
+  },
+  {
+    id: 4,
+    name: 'Rose in Resin',
+    description: 'A beautiful rose preserved in resin.',
+    price: 29.99,
+    image: '/src/images/roses_in_resin.jpg',
+  }
   // Add more products here
 ];
 
