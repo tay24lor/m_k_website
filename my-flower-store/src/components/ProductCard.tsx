@@ -1,18 +1,18 @@
 import React from 'react';
-import '../styles/ProductCard.css';
 import { Product } from '../types/Product';
+import { useCart } from '../context/useCart';
+import '../styles/ProductCard.css';
 
-interface ProductCardProps {
-  product: Product;
-}
+const ProductCard: React.FC<{ product: Product }> = ({ product }) => {
+  const { addToCart } = useCart();
 
-const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
   return (
     <div className="product-card">
-      <img src={product.image} alt={product.name} width={200} />
-      <h2>{product.name}</h2>
+      <img src={product.image} alt={product.name} />
+      <h3>{product.name}</h3>
       <p>{product.description}</p>
-      <p>${product.price.toFixed(2)}</p>
+      <div>${product.price.toFixed(2)}</div>
+      <button onClick={() => addToCart(product)}>Add to Cart</button>
     </div>
   );
 };

@@ -1,0 +1,11 @@
+.about-container {
+    background-color: linen;
+    height: 100%;
+    justify-items: center;
+    padding-bottom: 10rem;
+}
+
+.about-description {
+    width: 50%;
+    text-align: justify;
+}

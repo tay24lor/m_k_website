@@ -1,0 +1,74 @@
+/* Color Palette */
+:root {
+    --linen: #FAF0E6;
+    --marigold: #E6A100;
+    --olive: #808000;
+    --pecan: #6E3D1F;
+    --terracotta: #E2725B;
+    --garnet: #8B0000;
+}
+
+/* Basic Reset */
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--linen);
+    color: var(--pecan);
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--marigold);
+    color: var(--linen);
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    background-color: var(--olive);
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: var(--linen);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Intro Section */
+.intro {
+    text-align: center;
+    padding: 40px;
+    background-color: var(--terracotta);
+    color: var(--linen);
+}
+
+button {
+    background-color: var(--garnet);
+    color: var(--linen);
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: var(--pecan);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: var(--olive);
+    color: var(--linen);
+}

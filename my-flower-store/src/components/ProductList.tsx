@@ -6,16 +6,16 @@ import { Product } from '../types/Product';
 const products: Product[] = [
   {
     id: 1,
-    name: 'Rose in Resin',
+    name: 'Large Rose in Resin',
     description: 'A beautiful rose preserved in resin.',
     price: 29.99,
     image: '/src/images/roses_in_resin.jpg',
   },
   {
     id: 2,
-    name: 'Rose in Resin',
+    name: 'Small Rose in Resin',
     description: 'A beautiful rose preserved in resin.',
-    price: 29.99,
+    price: 10.99,
     image: '/src/images/roses_in_resin.jpg',
   },
   {

@@ -1,0 +1,13 @@
+.page-container {
+    background-color: linen;
+}
+
+.header-nav {
+    margin: 0;
+}
+
+.product-container {
+    border-top-style: solid;
+    border-color: var(--pecan);
+    margin: 2px;
+}
