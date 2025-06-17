@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import emailjs from 'emailjs-com';
 import '../styles/Contact.css';
-import { Link } from 'react-router-dom';
+import Menu from './Menu';
 
 const Contact: React.FC = () => {
     const formRef = useRef<HTMLFormElement>(null);
@@ -33,16 +33,7 @@ const Contact: React.FC = () => {
 
     return (
         <div className="page-container">
-            <div className="header-nav">
-                <nav>
-                    <ul>
-                        <li><Link to="/">Home</Link></li>
-                        <li><Link to="/products">Products</Link></li>
-                        <li><Link to="/contact">Contact</Link></li>
-                        <li><Link to="/about">About Us</Link></ li>
-                    </ul>
-                </nav>
-            </div>
+            <Menu />
             <form className="contact-form" ref={formRef} onSubmit={sendEmail}>
                 <h2>Contact Us</h2>
                 <div className="form-group">

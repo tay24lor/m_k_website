@@ -1,20 +1,11 @@
 import React from 'react';
 import '../styles/About.css'; // Ensure you create a corresponding CSS file for styling
-import { Link } from 'react-router-dom';
+import Menu from './Menu';
 
 const About: React.FC = () => {
     return (
         <div className="about-container">
-            <div className="header-nav">
-                <nav>
-                    <ul>
-                        <li><Link to="/">Home</Link></li>
-                        <li><Link to="/products">Products</Link></li>
-                        <li><Link to="/contact">Contact</Link></li>
-                        <li><Link to="/about">About Us</Link></ li>
-                    </ul>
-                </nav>
-            </div>
+            <Menu />
             <h1 className="about-title">About Us</h1>
             <p className="about-description">
                 Welcome to the Flower Resin Store! We specialize in preserving the beauty of nature by creating exquisite flower resin products. 
