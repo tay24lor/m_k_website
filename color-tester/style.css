@@ -1,11 +1,11 @@
 /* Color Palette */
 :root {
-    --linen: #FAF0E6;
-    --marigold: #E6A100;
-    --olive: #808000;
-    --pecan: #6E3D1F;
-    --terracotta: #E2725B;
-    --garnet: #8B0000;
+    --linen: #646018;
+    --marigold: #0008e6;
+    --olive: #0a214e;
+    --pecan: #a2948c;
+    --terracotta: #272490;
+    --garnet: #00718b;
 }
 
 /* Basic Reset */
