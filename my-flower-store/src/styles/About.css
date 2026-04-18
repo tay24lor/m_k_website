@@ -9,3 +9,19 @@
     width: 50%;
     text-align: justify;
 }
+
+@media (max-width: 768px) {
+    .about-description {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .about-description {
+        width: 85%;
+        padding: 0.5rem;
+        background-color: rgb(250, 240, 230);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+    
+}

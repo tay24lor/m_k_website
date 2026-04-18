@@ -20,7 +20,7 @@ body {
 /* Media query for mobile devices (480px and below) */
 @media (max-width: 480px) {
   #root {
-    padding: 1rem; /* Further reduce padding for very small screens */
+    padding: 0.1rem; /* Further reduce padding for very small screens */
     background-size: contain; /* Adjust background image scaling */
   }
 }
