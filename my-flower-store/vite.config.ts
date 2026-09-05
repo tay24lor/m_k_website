@@ -6,7 +6,7 @@ export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), '')
 
   return {
-    base: mode === 'production' ? env.VITE_BASE_PATH || '/m_k_website/my-flower-store/' : '/',
+    base: mode === 'production' ? env.VITE_BASE_PATH || '/m_k_website/' : '/',
     plugins: [react()],
   }
 })
