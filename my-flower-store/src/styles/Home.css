@@ -1,91 +1,221 @@
 @import './Constants.css';
 
-.home-container {
+.home-page {
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  height: 100vh;
-  background-size: cover;
-  background-position: center;
-  text-align: center;
   flex-direction: column;
-  background-color: rgb(250, 240, 230);
+  gap: 2.6rem;
+  padding: 0 0 4rem;
 }
 
-.hero-section {
-  background-color: rgba(250, 240, 230, 0.695); /* Light semi-transparent overlay */
-  padding: 2.5rem;
-  border-radius: 20px; /* Softer border radius for a modern look */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
-  max-width: 800px; /* Restrict width for better focus */
-  width: 90%; /* Ensure responsiveness */
+.home-hero,
+.showcase-section,
+.process-section,
+.home-inquiry-cta {
+  width: min(1100px, 92%);
+  margin: 0 auto;
 }
 
-.hero-section:hover {
-    background: url("/src/images/mk_home_background.png") no-repeat rgba(250, 240, 230, 0.695);
+.home-hero {
+  padding: clamp(1.6rem, 4vw, 3.2rem);
+  border-radius: var(--radius-lg);
+  background:
+    linear-gradient(120deg, rgba(255, 248, 241, 0.9), rgba(250, 240, 230, 0.8)),
+    url('/src/images/mk_home_background.png') center/cover no-repeat;
+  border: 1px solid rgba(69, 24, 0, 0.14);
+  box-shadow: var(--shadow-soft);
+  text-align: left;
 }
 
+.hero-kicker {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.76rem;
+  color: var(--garnet);
+}
 
 .hero-title {
-  font-size: 2rem; /* Slightly smaller for balance */
-  margin-bottom: 1rem;
-  font-family: 'Georgia', serif;
-  color: var(--pecan); /* Matches the button color for consistency */
+  margin: 0.7rem 0 0.7rem;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  line-height: 0.95;
 }
 
 .hero-subtitle {
-  font-size: 1.2rem;
-  font-style: italic;
-  margin-bottom: 1.5rem;
-  color: var(--marigold); /* Softer color for a subtle look */
+  margin: 0;
+  max-width: 62ch;
+  color: rgba(69, 24, 0, 0.82);
+  line-height: 1.65;
+}
+
+.hero-actions {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
 }
 
 .cta-button {
-  padding: 0.8rem 2rem;
-  font-size: 1rem;
-  color: #fff;
-  background-color: var(--marigold); /* Matches the site's primary color */
-  border: none;
-  border-radius: 25px; /* Rounded button for a modern look */
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   text-decoration: none;
+  font-weight: 700;
+  font-size: 0.9rem;
+  border-radius: 999px;
+  padding: 0.72rem 1.2rem;
+  transition: transform 240ms ease, box-shadow 240ms ease, background-color 240ms ease;
+}
+
+.cta-button.primary {
+  color: var(--pecan);
+  background-color: var(--marigold);
+  box-shadow: 0 8px 20px rgba(234, 162, 33, 0.35);
+}
+
+.cta-button.secondary {
+  color: var(--pecan);
+  background-color: rgba(250, 240, 230, 0.92);
+  border: 1px solid rgba(69, 24, 0, 0.2);
 }
 
 .cta-button:hover {
-  background-color: #eaa421bb;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-soft);
 }
 
-/* Responsive adjustments for tablets */
-@media (max-width: 768px) {
-  .hero-title {
-    font-size: 2rem;
-  }
+.section-title {
+  margin: 0 0 1.2rem;
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+}
 
-  .hero-subtitle {
-    font-size: 1rem;
-  }
+.showcase-grid {
+  display: grid;
+  gap: 1.1rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
 
-  .cta-button {
-    font-size: 0.9rem;
-    padding: 0.7rem 1.5rem;
+.showcase-card {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: rgba(255, 248, 241, 0.9);
+  border: 1px solid rgba(69, 24, 0, 0.16);
+  box-shadow: var(--shadow-soft);
+}
+
+.showcase-image-wrap {
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+
+.showcase-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 400ms ease;
+}
+
+.showcase-card:hover .showcase-image {
+  transform: scale(1.06);
+}
+
+.showcase-content {
+  padding: 1rem 1rem 1.2rem;
+  text-align: left;
+}
+
+.showcase-content h3 {
+  margin: 0;
+  font-size: 1.45rem;
+}
+
+.showcase-content p {
+  margin: 0.4rem 0 0;
+  font-size: 0.95rem;
+  color: rgba(69, 24, 0, 0.8);
+  line-height: 1.6;
+}
+
+.parallax-band {
+  min-height: 36vh;
+  background:
+    linear-gradient(120deg, rgba(69, 24, 0, 0.44), rgba(115, 54, 53, 0.34)),
+    url('/src/images/pink-blue-floral-bouquet-with-watercolor.jpg') center/cover no-repeat fixed;
+  display: grid;
+  place-items: center;
+}
+
+.parallax-overlay {
+  background: rgba(255, 248, 241, 0.82);
+  border: 1px solid rgba(69, 24, 0, 0.18);
+  border-radius: 999px;
+  padding: 0.8rem 1.4rem;
+  box-shadow: var(--shadow-soft);
+}
+
+.parallax-overlay p {
+  margin: 0;
+  letter-spacing: 0.04em;
+  font-weight: 600;
+  color: var(--pecan);
+}
+
+.process-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.process-card {
+  background: linear-gradient(165deg, rgba(255, 248, 241, 0.95), rgba(250, 240, 230, 0.9));
+  border: 1px solid rgba(69, 24, 0, 0.16);
+  border-radius: var(--radius-md);
+  padding: 1.1rem;
+  box-shadow: var(--shadow-soft);
+}
+
+.process-index {
+  display: inline-block;
+  color: var(--terracotta);
+  font-weight: 700;
+  margin-bottom: 0.7rem;
+}
+
+.process-card p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+.home-inquiry-cta {
+  padding: 2rem 1.6rem;
+  border-radius: var(--radius-lg);
+  text-align: center;
+  background: linear-gradient(120deg, rgba(203, 104, 67, 0.15), rgba(234, 162, 33, 0.2));
+  border: 1px solid rgba(69, 24, 0, 0.2);
+  box-shadow: var(--shadow-soft);
+}
+
+.home-inquiry-cta h2 {
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 2.8rem);
+}
+
+.home-inquiry-cta p {
+  margin: 0.4rem 0 1.2rem;
+}
+
+@keyframes revealUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-
-
-/* Responsive adjustments for mobile devices */
-@media (max-width: 480px) {
-  .hero-title {
-    font-size: 1.8rem;
-  }
-
-  .hero-subtitle {
-    font-size: 0.9rem;
-  }
-
-  .cta-button {
-    font-size: 0.8rem;
-    padding: 0.6rem 1.2rem;
+@media (max-width: 900px) {
+  .parallax-band {
+    background-attachment: scroll;
   }
 }

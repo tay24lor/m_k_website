@@ -1,8 +1,14 @@
 .footer {
-    background-color: var(--pecan);
-    padding: 20px;
+    background: linear-gradient(140deg, var(--pecan), var(--garnet));
+    padding: 1.2rem;
     text-align: center;
-    position: relative;
-    bottom: 0;
-    color: linen;
+    color: var(--cream);
+    margin-top: auto;
+    border-top: 1px solid rgba(250, 240, 230, 0.2);
+}
+
+.footer p {
+    margin: 0;
+    font-size: 0.9rem;
+    letter-spacing: 0.03em;
 }

@@ -1,23 +1,31 @@
 import React from 'react';
-import '../styles/About.css'; // Ensure you create a corresponding CSS file for styling
+import '../styles/About.css';
 import Menu from './Menu';
+import { useScrollReveal } from '../hooks/useScrollReveal';
 
 const About: React.FC = () => {
+    useScrollReveal();
+
     return (
         <div className="about-container">
             <Menu />
-            <h1 className="about-title">About Us</h1>
-            <p className="about-description">
-                Welcome to the Flower Resin Store! We specialize in preserving the beauty of nature by creating exquisite flower resin products. 
-                Our mission is to bring timeless elegance into your life with handcrafted pieces that capture the essence of flowers.
-            </p>
-            <p className="about-description">
-                Each product is carefully designed and crafted with love, ensuring that every detail reflects our passion for nature and art. 
-                Whether you're looking for a unique gift or a beautiful addition to your home, we have something special for everyone.
-            </p>
-            <p className="about-description">
-                Thank you for supporting our small business. We hope our creations bring joy and beauty into your life!
-            </p>
+
+            <section className="about-panel reveal-on-scroll">
+                <p className="about-kicker">Our Studio</p>
+                <h1 className="about-title">We preserve flowers so important moments can stay in view.</h1>
+                <p className="about-description">
+                    M|K Resin Studio is for people who cannot bear to watch meaningful flowers fade away. Each piece
+                    is designed around your bouquet structure, preserving volume, texture, and movement through layered resin casting.
+                </p>
+                <p className="about-description">
+                    We work one-on-one to match the right shape, scale, and layout to the emotion behind your arrangement,
+                    whether it came from a wedding day, a remembrance, an anniversary, or another once-in-a-lifetime moment.
+                </p>
+                <p className="about-description">
+                    Every order is custom and hand-finished. The result is a lasting keepsake made from your real flowers,
+                    ready to be seen, shared, and remembered for years.
+                </p>
+            </section>
         </div>
     );
 };

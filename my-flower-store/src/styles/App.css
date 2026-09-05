@@ -1,27 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap');
+@import './Constants.css';
+
+* {
+  box-sizing: border-box;
+}
+
 #root {
-  max-width: 100vw; /* Ensures the app takes up the full viewport width */
-  text-align: center;
-   /* Ensures the background image covers the entire area */
-  background-position: center;
+  width: 100%;
+  min-height: 100vh;
 }
 
 body {
-    margin: 0;
+  margin: 0;
+  font-family: 'Manrope', sans-serif;
+  color: var(--pecan);
+  background:
+    radial-gradient(circle at 20% 10%, rgba(234, 162, 33, 0.12), transparent 30%),
+    radial-gradient(circle at 80% 0%, rgba(203, 104, 67, 0.16), transparent 40%),
+    linear-gradient(180deg, var(--cream) 0%, var(--linen) 100%);
 }
 
-/* Media query for tablets (768px and below) */
-@media (max-width: 768px) {
-  #root {
-    padding: 1.5rem; /* Reduce padding for smaller screens */
-    text-align: left; /* Adjust text alignment for better readability */
-  }
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image: linear-gradient(rgba(69, 24, 0, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(69, 24, 0, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+  mask-image: radial-gradient(circle at center, black 35%, transparent 80%);
+  z-index: -1;
 }
 
-/* Media query for mobile devices (480px and below) */
-@media (max-width: 480px) {
-  #root {
-    padding: 0.1rem; /* Further reduce padding for very small screens */
-    background-size: contain; /* Adjust background image scaling */
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Cormorant Garamond', serif;
+  letter-spacing: 0.02em;
+}
+
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 680ms ease, transform 680ms ease;
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+.reveal-on-scroll.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal-on-scroll {
+    opacity: 1;
+    transform: none;
+    transition: none;
   }
 }
 

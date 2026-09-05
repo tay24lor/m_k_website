@@ -3,14 +3,13 @@ import React from 'react';
 
 const Menu: React.FC = () => {
     return (
-        <div className="header-nav">
+        <div className="site-nav-wrap">
             <nav>
-                <ul>
+                <ul className="site-nav">
                     <li><Link to="/">Home</Link></li>
-                    <li><Link to="/products">Products</Link></li>
+                    <li><Link to="/products">Options</Link></li>
                     <li><Link to="/contact">Contact</Link></li>
-                    <li><Link to="/about">About Us</Link></li>
-                    <li><Link to="/cart">Cart</Link></li>
+                    <li><Link to="/about">About</Link></li>
                 </ul>
             </nav>
         </div>

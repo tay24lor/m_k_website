@@ -1,0 +1,40 @@
+@import './Constants.css';
+
+.floating-inquiry-button {
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    z-index: 30;
+    display: none;
+    text-decoration: none;
+    color: var(--pecan);
+    background: linear-gradient(135deg, var(--marigold), #f7ba50);
+    border-radius: 999px;
+    border: 1px solid rgba(69, 24, 0, 0.24);
+    padding: 0.75rem 1rem;
+    font-size: 0.86rem;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    box-shadow: 0 16px 34px rgba(69, 24, 0, 0.28);
+    animation: pulseLift 2.6s ease-in-out infinite;
+}
+
+@media (max-width: 768px) {
+    .floating-inquiry-button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@keyframes pulseLift {
+    0%,
+    100% {
+        transform: translateY(0);
+        box-shadow: 0 16px 34px rgba(69, 24, 0, 0.28);
+    }
+    50% {
+        transform: translateY(-3px);
+        box-shadow: 0 22px 36px rgba(69, 24, 0, 0.34);
+    }
+}

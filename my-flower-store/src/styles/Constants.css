@@ -3,4 +3,11 @@
     --terracotta: #CB6843;
     --garnet: #733635;
     --pecan: #451800;
+    --linen: #FAF0E6;
+    --cream: #FFF8F1;
+    --gold-glow: rgba(234, 162, 33, 0.22);
+    --shadow-soft: 0 10px 30px rgba(69, 24, 0, 0.15);
+    --shadow-strong: 0 20px 40px rgba(69, 24, 0, 0.22);
+    --radius-lg: 24px;
+    --radius-md: 14px;
 }

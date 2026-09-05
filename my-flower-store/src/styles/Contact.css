@@ -1,73 +1,109 @@
-.page-container {
-    padding-bottom: 10px;
+@import './Constants.css';
+
+.contact-page {
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+    padding-bottom: 3.6rem;
+}
+
+.contact-intro,
+.contact-form {
+    width: min(840px, 92%);
+    margin: 0 auto;
+}
+
+.contact-intro {
+    border-radius: var(--radius-lg);
+    padding: 1.6rem;
+    background: linear-gradient(160deg, rgba(255, 248, 241, 0.9), rgba(250, 240, 230, 0.85));
+    border: 1px solid rgba(69, 24, 0, 0.16);
+    box-shadow: var(--shadow-soft);
+}
+
+.contact-kicker {
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-size: 0.74rem;
+    color: var(--garnet);
+}
+
+.contact-intro h1 {
+    margin: 0.5rem 0;
+    font-size: clamp(2rem, 5vw, 2.9rem);
+}
+
+.contact-intro p {
+    margin: 0;
+    line-height: 1.6;
 }
 
 .contact-form {
-    max-width: 500px;
-    margin: 0 auto; /* Centers the form horizontally */
-    margin-top: 10px;
-    padding: 20px; /* Adds padding inside the form */
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    border-bottom-style: none;
-    background-color: linen;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: var(--radius-lg);
+    border: 1px solid rgba(69, 24, 0, 0.18);
+    background: rgba(255, 248, 241, 0.92);
+    box-shadow: var(--shadow-soft);
+    padding: 1.4rem;
     display: flex;
-    flex-direction: column; /* Aligns children vertically */
-    align-items: center; /* Centers children horizontally */
-    box-sizing: border-box; /* Ensures padding is included in width calculations */
+    flex-direction: column;
+    gap: 0.8rem;
 }
 
 .contact-form h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #333;
+    margin: 0 0 0.4rem;
+    font-size: 1.8rem;
 }
 
 .form-group {
-    width: 100%; /* Ensures fields take up the full width of the form */
-    margin-bottom: 15px;
+    width: 100%;
     display: flex;
-    flex-direction: column; /* Aligns label and input vertically */
-    align-items: flex-start; /* Aligns label and input to the left */
-    box-sizing: border-box; /* Prevents overflow due to padding */
+    flex-direction: column;
+    gap: 0.35rem;
 }
 
 .form-group label {
-    margin-bottom: 5px;
-    font-weight: bold;
-    color: #555;
+    font-weight: 700;
+    font-size: 0.9rem;
 }
 
 .form-group input,
 .form-group textarea {
-    width: 100%; /* Makes inputs and textarea stretch to full width */
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
-    box-sizing: border-box; /* Ensures padding doesn't cause overflow */
+    width: 100%;
+    border: 1px solid rgba(69, 24, 0, 0.24);
+    border-radius: 10px;
+    padding: 0.72rem;
+    font-size: 0.96rem;
+    font-family: 'Manrope', sans-serif;
+    background-color: #fff;
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
-    border-color: #007bff;
     outline: none;
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    border-color: var(--terracotta);
+    box-shadow: 0 0 0 3px rgba(203, 104, 67, 0.22);
 }
 
 .submit-button {
-    width: 100%; /* Makes the button stretch to full width */
-    padding: 10px;
-    background-color: var(--marigold);
-    color: #fff;
+    margin-top: 0.4rem;
     border: none;
-    border-radius: 4px;
-    font-size: 16px;
+    border-radius: 999px;
+    padding: 0.82rem 1.2rem;
+    background: var(--marigold);
+    color: var(--pecan);
+    font-size: 0.95rem;
+    font-weight: 700;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: transform 220ms ease, box-shadow 220ms ease;
 }
 
-.submit-button:hover {
-    background-color: #0056b3;
+.submit-button:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 26px rgba(234, 162, 33, 0.35);
+}
+
+.submit-button:disabled {
+    opacity: 0.75;
+    cursor: progress;
 }

@@ -3,10 +3,10 @@ import '../styles/Header.css';
 
 const Header: React.FC = () => {
     return (
-        <header className="header">
-        {/* <img src="/src/images/pink-blue-floral-bouquet-with-watercolor.jpg" alt="pink-blue-floral-bouquet-with-watercolor" width={100} /> */}
-            <div className='logo'>
-                <p>M|K</p>
+        <header className="site-header">
+            <div className="brand-lockup">
+                <p className="brand-mark">M|K</p>
+                <p className="brand-tagline">Custom Resin Floral Preservation</p>
             </div>
         </header>
     );
